@@ -6,7 +6,6 @@ import { AgentsSectionIntro } from "@/components/sections/AgentsSectionIntro";
 import { ValuePropSection } from "@/components/sections/ValuePropSection";
 import { PlatformShowcaseSection } from "@/components/sections/PlatformShowcaseSection";
 import { OrchestrationSection } from "@/components/sections/OrchestrationSection";
-import { DemoSection } from "@/components/sections/DemoSection";
 import { DepartmentsSection } from "@/components/sections/DepartmentsSection";
 import { BuilderSection } from "@/components/sections/BuilderSection";
 import { MarketplaceSection } from "@/components/sections/MarketplaceSection";
@@ -28,7 +27,6 @@ export default function Home() {
       <ValuePropSection />
       <PlatformShowcaseSection />
       <OrchestrationSection />
-      <DemoSection />
       <DepartmentsSection />
       <BuilderSection />
       <MarketplaceSection />
