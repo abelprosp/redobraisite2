@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Redobrai Corp — O Sistema Operacional para Empresas movidas por IA",
+  title: "Redobrai Corp — Software, IA e Tecnologia com Propósito",
   description:
-    "Crie, conecte, orquestre e monitore funcionários de Inteligência Artificial capazes de executar processos completos. A principal plataforma brasileira de Agentes de IA para empresas.",
+    "Software customizado, visão computacional, agentes de IA, DRedobrai Foundation e Redobrai Partner. Tecnologia brasileira que transforma empresas e impacta vidas.",
   keywords: [
     "agentes de IA",
     "inteligência artificial empresarial",

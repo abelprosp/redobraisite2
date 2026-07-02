@@ -1,10 +1,6 @@
+import Link from "next/link";
 import { Logo } from "@/components/ui/Logo";
-
-const footerLinks = {
-  Produtos: ["Plataforma", "Agentes", "Marketplace", "Integrações"],
-  Empresa: ["Sobre", "Carreiras", "Blog", "Contato"],
-  Legal: ["Privacidade", "LGPD", "Termos de Uso"],
-};
+import { FOOTER_LINKS } from "@/lib/constants";
 
 export function Footer() {
   return (
@@ -16,7 +12,8 @@ export function Footer() {
               <Logo height={40} />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-              O Sistema Operacional para Empresas movidas por Inteligência Artificial.
+              Software customizado, visão computacional, agentes de IA e tecnologia com
+              propósito — do enterprise ao impacto social.
             </p>
             <div className="flex gap-3 mt-6">
               {[
@@ -60,15 +57,18 @@ export function Footer() {
             </div>
           </div>
 
-          {Object.entries(footerLinks).map(([title, links]) => (
+          {Object.entries(FOOTER_LINKS).map(([title, links]) => (
             <div key={title}>
               <h4 className="text-white font-medium text-sm mb-4">{title}</h4>
               <ul className="space-y-2.5">
                 {links.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">
-                      {link}
-                    </a>
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
+                      className="text-gray-400 text-sm hover:text-white transition-colors"
+                    >
+                      {link.label}
+                    </Link>
                   </li>
                 ))}
               </ul>

@@ -146,9 +146,9 @@ export function Hero() {
               transition={{ delay: 0.05 }}
               className="text-4xl sm:text-5xl lg:text-[3.25rem] font-light tracking-tight leading-[1.12] text-gray-900"
             >
-              O futuro da sua empresa não será feito por softwares.{" "}
+              Tecnologia brasileira que{" "}
               <span className="font-normal text-brand-600">
-                Será feito por Agentes de IA.
+                transforma empresas e impacta vidas.
               </span>
             </motion.h1>
 
@@ -158,9 +158,8 @@ export function Hero() {
               transition={{ delay: 0.1 }}
               className="mt-6 text-lg text-gray-600 leading-relaxed max-w-xl"
             >
-              Crie, conecte, orquestre e monitore funcionários de Inteligência Artificial
-              capazes de executar processos completos, colaborar entre si e transformar a
-              produtividade da sua empresa.
+              Software customizado, visão computacional, agentes de IA, pesquisa humanitária
+              e parcerias estratégicas — tudo em um só ecossistema de inovação.
             </motion.p>
 
             <motion.div
@@ -169,11 +168,11 @@ export function Hero() {
               transition={{ delay: 0.15 }}
               className="mt-8 flex flex-wrap items-center gap-4"
             >
-              <Button href="#contato" size="lg">
+              <Button href="/#contato" size="lg">
                 Solicitar Demonstração
               </Button>
-              <a href="#plataforma" className="link-arrow text-sm">
-                Conheça a Plataforma
+              <a href="#custom" className="link-arrow text-sm">
+                Conheça nossas soluções
                 <ArrowRight className="w-4 h-4" />
               </a>
             </motion.div>

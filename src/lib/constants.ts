@@ -1,11 +1,154 @@
-export const NAV_LINKS = [
+export type NavChild = { label: string; href: string };
+
+export type NavLink =
+  | { label: string; href: string; children?: never }
+  | { label: string; children: NavChild[]; href?: never };
+
+export const NAV_LINKS: NavLink[] = [
   {
-    label: "Produtos",
-    children: ["Plataforma", "Agentes", "Soluções", "Integrações", "Casos de Uso"],
+    label: "Soluções",
+    children: [
+      { label: "Software Customizado", href: "/#custom" },
+      { label: "Visão Computacional", href: "/#visao-computacional" },
+      { label: "Agentes de IA", href: "/#agentes" },
+    ],
   },
-  { label: "Empresa", href: "#empresa" },
-  { label: "Contato", href: "#contato" },
+  { label: "DRedobrai Foundation", href: "/foundation" },
+  { label: "Redobrai Partner", href: "/partner" },
+  { label: "Contato", href: "/#contato" },
 ];
+
+export const OFFERINGS = [
+  {
+    title: "Software Customizado",
+    description:
+      "Desenvolvemos sistemas sob medida para empresas — do planejamento à entrega, com arquitetura escalável e foco no seu negócio.",
+    href: "/#custom",
+    icon: "Code2",
+  },
+  {
+    title: "Agentes de IA",
+    description:
+      "Plataforma para criar, orquestrar e monitorar funcionários de Inteligência Artificial que executam processos completos.",
+    href: "/#agentes",
+    icon: "Bot",
+  },
+  {
+    title: "DRedobrai Foundation",
+    description:
+      "Pesquisa com IA para ajuda humanitária em catástrofes de cheias e desastres naturais.",
+    href: "/foundation",
+    icon: "HeartHandshake",
+  },
+  {
+    title: "Redobrai Partner",
+    description:
+      "Entramos como sócios nas suas ideias — co-criamos, investimos conhecimento e tecnologia no seu projeto.",
+    href: "/partner",
+    icon: "Handshake",
+  },
+];
+
+export const CUSTOM_SERVICES = [
+  {
+    title: "Sistemas sob medida",
+    description: "ERPs, portais, integrações e plataformas desenvolvidas para a realidade da sua operação.",
+    icon: "Layers",
+  },
+  {
+    title: "Integrações & APIs",
+    description: "Conectamos seus sistemas legados a ferramentas modernas com APIs robustas e seguras.",
+    icon: "Plug",
+  },
+  {
+    title: "Modernização de legado",
+    description: "Migração gradual de sistemas antigos para arquiteturas cloud-native sem parar a operação.",
+    icon: "RefreshCw",
+  },
+  {
+    title: "Consultoria técnica",
+    description: "Arquitetura, code review, definição de stack e acompanhamento de squads de desenvolvimento.",
+    icon: "Users",
+  },
+];
+
+export const COMPUTER_VISION = [
+  {
+    title: "Inspeção visual automatizada",
+    description: "Detecção de defeitos, classificação de produtos e controle de qualidade em linha de produção.",
+    icon: "ScanEye",
+  },
+  {
+    title: "Monitoramento por câmeras",
+    description: "Análise de vídeo em tempo real para segurança, contagem de pessoas e detecção de eventos.",
+    icon: "Cctv",
+  },
+  {
+    title: "OCR & documentos",
+    description: "Leitura inteligente de notas fiscais, contratos e formulários com extração estruturada de dados.",
+    icon: "FileSearch",
+  },
+  {
+    title: "Drones & imagens aéreas",
+    description: "Processamento de imagens de drones para agricultura, obras, logística e mapeamento territorial.",
+    icon: "Plane",
+  },
+];
+
+export const FOUNDATION_PILLARS = [
+  {
+    title: "Detecção precoce de cheias",
+    description: "Modelos de IA analisam dados de satélite, sensores e histórico para alertar comunidades em risco.",
+    icon: "Waves",
+  },
+  {
+    title: "Mapeamento de áreas afetadas",
+    description: "Visão computacional identifica regiões inundadas e prioriza rotas de resgate e evacuação.",
+    icon: "Map",
+  },
+  {
+    title: "Coordenação de resgate",
+    description: "Sistemas que conectam voluntários, abrigos e equipes de emergência em tempo real.",
+    icon: "Radio",
+  },
+  {
+    title: "Pesquisa aberta",
+    description: "Desenvolvemos tecnologia com foco em impacto social, publicando avanços para a comunidade científica.",
+    icon: "BookOpen",
+  },
+];
+
+export const PARTNER_BENEFITS = [
+  {
+    title: "Co-fundação técnica",
+    description: "Entramos com engenharia, arquitetura e desenvolvimento como sócios do seu produto digital.",
+    icon: "Code2",
+  },
+  {
+    title: "Mentoria & estratégia",
+    description: "Acesso à experiência da Redobrai em IA, software enterprise e go-to-market B2B.",
+    icon: "Lightbulb",
+  },
+  {
+    title: "Infraestrutura de IA",
+    description: "Utilize nossa stack de agentes, visão computacional e integrações no seu projeto.",
+    icon: "Server",
+  },
+  {
+    title: "Modelo flexível",
+    description: "Equity, revenue share ou híbrido — estruturamos a parceria de acordo com a fase da sua ideia.",
+    icon: "Scale",
+  },
+];
+
+export const PARTNER_STEPS = [
+  { step: "01", title: "Envie sua ideia", desc: "Conte o problema que quer resolver e o estágio do projeto." },
+  { step: "02", title: "Avaliação conjunta", desc: "Analisamos viabilidade técnica, mercado e fit com a Redobrai." },
+  { step: "03", title: "Estruturação", desc: "Definimos papéis, equity e roadmap de desenvolvimento." },
+  { step: "04", title: "Co-criação", desc: "Construímos juntos com nossa equipe integrada ao seu time." },
+];
+
+// --- Agentes (mantido) ---
 
 export const DEPARTMENTS = [
   { name: "Financeiro", icon: "Wallet", color: "#198038", agent: "Agente Financeiro" },
@@ -158,62 +301,52 @@ export const USE_CASES = [
   { name: "Logística", icon: "Truck" },
 ];
 
-export const TESTIMONIALS = [
-  {
-    quote:
-      "A Redobrai transformou nossa operação. 47 agentes trabalhando em conjunto reduziram nosso tempo de resposta em 89%.",
-    author: "Mariana Costa",
-    role: "CTO",
-    company: "Nexa Industries",
-    avatar: "MC",
-  },
-  {
-    quote:
-      "Finalmente uma plataforma que entende enterprise. Governança, compliance e orquestração em um só lugar.",
-    author: "Ricardo Almeida",
-    role: "Diretor de Operações",
-    company: "Grupo Horizonte",
-    avatar: "RA",
-  },
-  {
-    quote:
-      "Implementamos agentes em 8 departamentos em 3 semanas. O ROI foi visível no primeiro mês.",
-    author: "Fernanda Lima",
-    role: "CEO",
-    company: "Velox Digital",
-    avatar: "FL",
-  },
-];
-
 export const FAQ_ITEMS = [
   {
-    question: "O que é a Redobrai Computer?",
+    question: "O que é a Redobrai Corp?",
     answer:
-      "A Redobrai é a principal plataforma brasileira para criação, orquestração e gerenciamento de Agentes de Inteligência Artificial para empresas. Funciona como um sistema operacional onde você cria funcionários de IA especializados que colaboram entre si.",
+      "A Redobrai é uma empresa de tecnologia brasileira que desenvolve software customizado, soluções de visão computacional, plataforma de agentes de IA, pesquisa humanitária via DRedobrai Foundation e parcerias estratégicas via Redobrai Partner.",
+  },
+  {
+    question: "Vocês desenvolvem software sob medida?",
+    answer:
+      "Sim. Criamos sistemas personalizados para empresas — desde integrações e APIs até plataformas completas, com foco em arquitetura escalável e entrega ágil.",
   },
   {
     question: "Preciso saber programar para criar agentes?",
     answer:
-      "Não. Nossa plataforma oferece um builder visual com drag and drop, permitindo criar, configurar e publicar agentes sem escrever código. Desenvolvedores também podem usar APIs e webhooks para integrações avançadas.",
+      "Não. Nossa plataforma oferece um builder visual com drag and drop. Desenvolvedores também podem usar APIs e webhooks para integrações avançadas.",
   },
   {
-    question: "Como funciona a orquestração entre agentes?",
+    question: "O que é a DRedobrai Foundation?",
     answer:
-      "O Orquestrador Inteligente coordena a comunicação entre múltiplos agentes. Quando uma tarefa é iniciada, os agentes especializados colaboram automaticamente, compartilham contexto e executam fluxos completos de ponta a ponta.",
+      "É o braço de pesquisa da Redobrai focado em IA para ajuda humanitária em catástrofes de cheias e desastres naturais. Saiba mais em /foundation.",
   },
   {
-    question: "A plataforma é compatível com LGPD?",
+    question: "Como funciona o Redobrai Partner?",
     answer:
-      "Sim. Oferecemos governança completa com controle de acesso, auditoria, logs detalhados, versionamento e ferramentas específicas para compliance com a LGPD e regulamentações setoriais.",
-  },
-  {
-    question: "Quais integrações estão disponíveis?",
-    answer:
-      "Conectamos com centenas de sistemas: ERPs (SAP, Oracle, Totvs), CRMs (Salesforce, HubSpot), ferramentas de comunicação (Slack, Teams, WhatsApp), modelos de IA (OpenAI, Anthropic, Gemini) e bancos de dados.",
+      "Entramos como sócios técnicos nas suas ideias — oferecemos engenharia, IA e mentoria em troca de equity ou modelo híbrido. Visite /partner para enviar sua proposta.",
   },
   {
     question: "Como solicitar uma demonstração?",
     answer:
-      "Preencha o formulário na seção 'Solicitar Demonstração' com seu nome, empresa e WhatsApp. Você será direcionado ao nosso WhatsApp para agendar uma apresentação personalizada da plataforma.",
+      "Preencha o formulário na seção de contato com seu nome, empresa e WhatsApp. Você será direcionado ao nosso WhatsApp para agendar uma conversa.",
   },
 ];
+
+export const FOOTER_LINKS = {
+  Soluções: [
+    { label: "Software Customizado", href: "/#custom" },
+    { label: "Visão Computacional", href: "/#visao-computacional" },
+    { label: "Agentes de IA", href: "/#agentes" },
+  ],
+  Iniciativas: [
+    { label: "DRedobrai Foundation", href: "/foundation" },
+    { label: "Redobrai Partner", href: "/partner" },
+  ],
+  Empresa: [
+    { label: "Contato", href: "/#contato" },
+    { label: "Privacidade", href: "#" },
+    { label: "LGPD", href: "#" },
+  ],
+};

@@ -1,6 +1,8 @@
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
+import { PageShell } from "@/components/layout/PageShell";
 import { Hero } from "@/components/sections/Hero";
+import { OfferingsSection } from "@/components/sections/OfferingsSection";
+import { CustomSoftwareSection } from "@/components/sections/CustomSoftwareSection";
+import { AgentsSectionIntro } from "@/components/sections/AgentsSectionIntro";
 import { ValuePropSection } from "@/components/sections/ValuePropSection";
 import { PlatformShowcaseSection } from "@/components/sections/PlatformShowcaseSection";
 import { OrchestrationSection } from "@/components/sections/OrchestrationSection";
@@ -12,32 +14,31 @@ import { IntegrationsSection } from "@/components/sections/IntegrationsSection";
 import { GovernanceSection } from "@/components/sections/GovernanceSection";
 import { AnalyticsSection } from "@/components/sections/AnalyticsSection";
 import { UseCasesSection } from "@/components/sections/UseCasesSection";
-import { ResourcesSection } from "@/components/sections/ResourcesSection";
+import { InitiativesSection } from "@/components/sections/InitiativesSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
 
 export default function Home() {
   return (
-    <>
-      <Navbar />
-      <main>
-        <Hero />
-        <ValuePropSection />
-        <PlatformShowcaseSection />
-        <OrchestrationSection />
-        <DemoSection />
-        <DepartmentsSection />
-        <BuilderSection />
-        <MarketplaceSection />
-        <IntegrationsSection />
-        <GovernanceSection />
-        <AnalyticsSection />
-        <UseCasesSection />
-        <ResourcesSection />
-        <FAQSection />
-        <CTASection />
-      </main>
-      <Footer />
-    </>
+    <PageShell>
+      <Hero />
+      <OfferingsSection />
+      <CustomSoftwareSection />
+      <AgentsSectionIntro />
+      <ValuePropSection />
+      <PlatformShowcaseSection />
+      <OrchestrationSection />
+      <DemoSection />
+      <DepartmentsSection />
+      <BuilderSection />
+      <MarketplaceSection />
+      <IntegrationsSection />
+      <GovernanceSection />
+      <AnalyticsSection />
+      <UseCasesSection />
+      <InitiativesSection />
+      <FAQSection />
+      <CTASection />
+    </PageShell>
   );
 }

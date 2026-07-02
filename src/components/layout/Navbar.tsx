@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -10,7 +11,7 @@ import { NAV_LINKS } from "@/lib/constants";
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -35,52 +36,49 @@ export function Navbar() {
               <div
                 key={link.label}
                 className="relative"
-                onMouseEnter={() => setDropdownOpen(true)}
-                onMouseLeave={() => setDropdownOpen(false)}
+                onMouseEnter={() => setOpenDropdown(link.label)}
+                onMouseLeave={() => setOpenDropdown(null)}
               >
-                <button className="flex items-center gap-1 px-4 py-2 text-sm text-gray-700 hover:text-gray-900 transition-colors">
+                <button className="flex items-center gap-1 px-3 py-2 text-sm text-gray-700 hover:text-gray-900 transition-colors">
                   {link.label}
                   <ChevronDown className="w-3.5 h-3.5 text-gray-500" />
                 </button>
                 <AnimatePresence>
-                  {dropdownOpen && (
+                  {openDropdown === link.label && (
                     <motion.div
                       initial={{ opacity: 0, y: 4 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 4 }}
                       transition={{ duration: 0.15 }}
-                      className="absolute top-full left-0 mt-0 w-52 bg-white border border-gray-200 rounded-sm shadow-lg p-1"
+                      className="absolute top-full left-0 mt-0 w-56 bg-white border border-gray-200 rounded-sm shadow-lg p-1"
                     >
                       {link.children.map((child) => (
-                        <a
-                          key={child}
-                          href={`#${child.toLowerCase().replace(/\s+/g, "-")}`}
+                        <Link
+                          key={child.label}
+                          href={child.href}
                           className="block px-3 py-2.5 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-sm transition-colors"
                         >
-                          {child}
-                        </a>
+                          {child.label}
+                        </Link>
                       ))}
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
             ) : (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
-                className="px-4 py-2 text-sm text-gray-700 hover:text-gray-900 transition-colors"
+                href={link.href!}
+                className="px-3 py-2 text-sm text-gray-700 hover:text-gray-900 transition-colors whitespace-nowrap"
               >
                 {link.label}
-              </a>
+              </Link>
             )
           )}
         </div>
 
         <div className="hidden lg:flex items-center gap-3">
-          <a href="#" className="text-sm text-gray-700 hover:text-gray-900 px-3 py-2">
-            Entrar
-          </a>
-          <Button href="#contato" size="sm">
+          <Button href="/#contato" size="sm">
             Solicitar Demonstração
           </Button>
         </div>
@@ -106,28 +104,28 @@ export function Navbar() {
               {NAV_LINKS.flatMap((link) =>
                 link.children
                   ? link.children.map((child) => (
-                      <a
-                        key={child}
-                        href={`#${child.toLowerCase().replace(/\s+/g, "-")}`}
+                      <Link
+                        key={child.label}
+                        href={child.href}
                         className="block px-3 py-2.5 text-sm text-gray-600 hover:text-gray-900"
                         onClick={() => setMobileOpen(false)}
                       >
-                        {child}
-                      </a>
+                        {child.label}
+                      </Link>
                     ))
                   : [
-                      <a
+                      <Link
                         key={link.label}
-                        href={link.href}
+                        href={link.href!}
                         className="block px-3 py-2.5 text-sm text-gray-600 hover:text-gray-900"
                         onClick={() => setMobileOpen(false)}
                       >
                         {link.label}
-                      </a>,
+                      </Link>,
                     ]
               )}
-              <div className="pt-3 flex flex-col gap-2">
-                <Button href="#contato" className="w-full justify-center">
+              <div className="pt-3">
+                <Button href="/#contato" className="w-full justify-center">
                   Solicitar Demonstração
                 </Button>
               </div>

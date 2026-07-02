@@ -14,7 +14,7 @@ export function Logo({
 }: LogoProps) {
   return (
     <Link
-      href="#"
+      href="/"
       className={`inline-flex shrink-0 ${className}`}
       aria-label="Redobrai Corp — início"
     >
