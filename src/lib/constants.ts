@@ -13,7 +13,7 @@ export const NAV_LINKS: NavLink[] = [
       { label: "Agentes de IA", href: "/#agentes" },
     ],
   },
-  { label: "DRedobrai Foundation", href: "/foundation" },
+  { label: "Redobrai Foundation", href: "/foundation" },
   { label: "Redobrai Partner", href: "/partner" },
   { label: "Contato", href: "/#contato" },
 ];
@@ -34,7 +34,7 @@ export const OFFERINGS = [
     icon: "Bot",
   },
   {
-    title: "DRedobrai Foundation",
+    title: "Redobrai Foundation",
     description:
       "Pesquisa com IA para ajuda humanitária em catástrofes de cheias e desastres naturais.",
     href: "/foundation",
@@ -305,7 +305,7 @@ export const FAQ_ITEMS = [
   {
     question: "O que é a Redobrai Corp?",
     answer:
-      "A Redobrai é uma empresa de tecnologia brasileira que desenvolve software customizado, soluções de visão computacional, plataforma de agentes de IA, pesquisa humanitária via DRedobrai Foundation e parcerias estratégicas via Redobrai Partner.",
+      "A Redobrai é uma empresa de tecnologia brasileira que desenvolve software customizado, soluções de visão computacional, plataforma de agentes de IA, pesquisa humanitária via Redobrai Foundation e parcerias estratégicas via Redobrai Partner.",
   },
   {
     question: "Vocês desenvolvem software sob medida?",
@@ -318,7 +318,7 @@ export const FAQ_ITEMS = [
       "Não. Nossa plataforma oferece um builder visual com drag and drop. Desenvolvedores também podem usar APIs e webhooks para integrações avançadas.",
   },
   {
-    question: "O que é a DRedobrai Foundation?",
+    question: "O que é a Redobrai Foundation?",
     answer:
       "É o braço de pesquisa da Redobrai focado em IA para ajuda humanitária em catástrofes de cheias e desastres naturais. Saiba mais em /foundation.",
   },
@@ -341,7 +341,7 @@ export const FOOTER_LINKS = {
     { label: "Agentes de IA", href: "/#agentes" },
   ],
   Iniciativas: [
-    { label: "DRedobrai Foundation", href: "/foundation" },
+    { label: "Redobrai Foundation", href: "/foundation" },
     { label: "Redobrai Partner", href: "/partner" },
   ],
   Empresa: [

@@ -8,7 +8,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 const initiatives = [
   {
     icon: HeartHandshake,
-    title: "DRedobrai Foundation",
+    title: "Redobrai Foundation",
     description:
       "Pesquisa com IA para ajuda humanitária em catástrofes de cheias — detecção precoce, mapeamento e coordenação de resgate.",
     href: "/foundation",

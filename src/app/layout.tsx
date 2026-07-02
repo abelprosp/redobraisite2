@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Redobrai Corp — Software, IA e Tecnologia com Propósito",
   description:
-    "Software customizado, visão computacional, agentes de IA, DRedobrai Foundation e Redobrai Partner. Tecnologia brasileira que transforma empresas e impacta vidas.",
+    "Software customizado, visão computacional, agentes de IA, Redobrai Foundation e Redobrai Partner. Tecnologia brasileira que transforma empresas e impacta vidas.",
   keywords: [
     "agentes de IA",
     "inteligência artificial empresarial",

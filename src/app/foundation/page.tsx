@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 const iconMap: Record<string, LucideIcon> = { Waves, Map, Radio, BookOpen };
 
 export const metadata: Metadata = {
-  title: "DRedobrai Foundation — IA para ajuda humanitária em catástrofes",
+  title: "Redobrai Foundation — IA para ajuda humanitária em catástrofes",
   description:
     "Pesquisa com Inteligência Artificial para ajuda humanitária em catástrofes de cheias e desastres naturais.",
 };
@@ -27,7 +27,7 @@ export default function FoundationPage() {
               Impacto Social
             </span>
             <h1 className="text-4xl md:text-5xl font-light text-gray-900 tracking-tight leading-tight">
-              DRedobrai{" "}
+              Redobrai{" "}
               <span className="text-brand-600 font-normal">Foundation</span>
             </h1>
             <p className="mt-6 text-lg text-gray-600 leading-relaxed">
@@ -47,7 +47,7 @@ export default function FoundationPage() {
             </h2>
             <p className="mt-4 text-gray-600 leading-relaxed">
               Milhões de pessoas são afetadas por enchentes todos os anos no Brasil.
-              A DRedobrai Foundation une visão computacional, modelos preditivos e
+              A Redobrai Foundation une visão computacional, modelos preditivos e
               sistemas de coordenação para dar mais tempo às comunidades e às equipes
               de resgate.
             </p>
@@ -105,7 +105,7 @@ export default function FoundationPage() {
             Quer apoiar ou colaborar com a pesquisa?
           </h2>
           <p className="mt-4 text-gray-600">
-            ONGs, universidades, voluntários e empresas podem se juntar à DRedobrai Foundation.
+            ONGs, universidades, voluntários e empresas podem se juntar à Redobrai Foundation.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Button href="/#contato" size="lg">
