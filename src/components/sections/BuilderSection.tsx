@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { GripVertical, Wrench, Sparkles, Link2, FileText, Brain, GitBranch, Rocket } from "lucide-react";
 import { Section, SectionHeader } from "@/components/ui/SectionHeader";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
@@ -17,15 +16,15 @@ export function BuilderSection() {
         align="center"
       />
 
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="grid items-center gap-10 sm:gap-12 lg:grid-cols-2">
         <ScrollReveal>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid gap-3 min-[420px]:grid-cols-2">
             {BUILDER_FEATURES.map((feature, i) => {
               const Icon = featureIcons[i];
               return (
                 <div
                   key={feature}
-                  className="ibm-card rounded-sm p-4 flex items-center gap-3 bg-white"
+                  className="ibm-card flex min-h-14 items-center gap-3 rounded-sm bg-white p-4"
                 >
                   <Icon className="w-4 h-4 text-brand-600 shrink-0" strokeWidth={1.5} />
                   <span className="text-sm text-gray-700">{feature}</span>
@@ -45,8 +44,8 @@ export function BuilderSection() {
               </div>
               <span className="text-[10px] text-gray-400 font-mono">Agent Builder</span>
             </div>
-            <div className="p-4 grid grid-cols-12 gap-3 min-h-[300px]">
-              <div className="col-span-3 border border-gray-200 rounded-sm p-2 space-y-2 bg-gray-50">
+            <div className="grid min-h-[260px] grid-cols-12 gap-2 p-3 sm:min-h-[300px] sm:gap-3 sm:p-4">
+              <div className="col-span-3 hidden space-y-2 rounded-sm border border-gray-200 bg-gray-50 p-2 sm:block">
                 <div className="text-[9px] text-gray-500 uppercase px-1">Componentes</div>
                 {["Trigger", "LLM", "Tool", "API", "Flow"].map((item) => (
                   <div
@@ -58,7 +57,7 @@ export function BuilderSection() {
                   </div>
                 ))}
               </div>
-              <div className="col-span-6 border border-gray-200 rounded-sm p-3 bg-white">
+              <div className="col-span-12 rounded-sm border border-gray-200 bg-white p-3 sm:col-span-6">
                 <div className="text-[9px] text-gray-500 uppercase mb-3">Canvas</div>
                 <div className="space-y-2">
                   <div className="border-2 border-brand-300 bg-brand-50 rounded-sm p-3">
@@ -74,7 +73,7 @@ export function BuilderSection() {
                   </div>
                 </div>
               </div>
-              <div className="col-span-3 border border-gray-200 rounded-sm p-2 bg-gray-50">
+              <div className="col-span-3 hidden rounded-sm border border-gray-200 bg-gray-50 p-2 sm:block">
                 <div className="text-[9px] text-gray-500 uppercase mb-2">Propriedades</div>
                 <div className="space-y-2">
                   <div className="h-6 rounded-sm bg-white border border-gray-200" />

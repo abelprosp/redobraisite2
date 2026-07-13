@@ -20,17 +20,17 @@ export const metadata: Metadata = {
 export default function FoundationPage() {
   return (
     <PageShell>
-      <section className="pt-28 pb-16 gradient-bg-hero">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="gradient-bg-hero pb-12 pt-24 sm:pb-16 sm:pt-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="max-w-3xl">
             <span className="inline-block mb-4 px-3 py-1 rounded-sm text-xs font-medium tracking-wider uppercase bg-brand-100 text-brand-700">
               Impacto Social
             </span>
-            <h1 className="text-4xl md:text-5xl font-light text-gray-900 tracking-tight leading-tight">
+            <h1 className="text-[2.25rem] font-light leading-tight tracking-[-0.035em] text-gray-900 sm:text-4xl md:text-5xl">
               Redobrai{" "}
               <span className="text-brand-600 font-normal">Foundation</span>
             </h1>
-            <p className="mt-6 text-lg text-gray-600 leading-relaxed">
+            <p className="mt-5 text-[15px] leading-6 text-gray-600 sm:mt-6 sm:text-lg sm:leading-relaxed">
               Desenvolvemos pesquisas com Inteligência Artificial para ajuda humanitária
               em catástrofes de cheias e desastres naturais — salvando vidas com tecnologia
               de ponta e propósito.
@@ -40,7 +40,7 @@ export default function FoundationPage() {
       </section>
 
       <Section className="bg-white">
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="mb-12 grid items-center gap-9 sm:mb-16 sm:gap-12 lg:grid-cols-2">
           <ScrollReveal>
             <h2 className="text-2xl md:text-3xl font-normal text-gray-900 tracking-tight leading-snug">
               Quando a água sobe, a tecnologia precisa agir antes
@@ -68,7 +68,7 @@ export default function FoundationPage() {
 
           <ScrollReveal delay={0.15} direction="right">
             <div className="relative rounded-lg overflow-hidden border border-gray-200 aspect-[4/3] bg-gradient-to-br from-brand-700 via-brand-600 to-teal-600 flex items-center justify-center">
-              <div className="text-center p-8 text-white">
+              <div className="p-6 text-center text-white sm:p-8">
                 <Waves className="w-12 h-12 mx-auto mb-4 opacity-80" strokeWidth={1.5} />
                 <p className="text-lg font-light">IA a serviço da vida</p>
                 <p className="text-sm opacity-70 mt-2">Pesquisa · Resgate · Esperança</p>
@@ -83,12 +83,12 @@ export default function FoundationPage() {
           align="center"
         />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">
           {FOUNDATION_PILLARS.map((pillar, i) => {
             const Icon = iconMap[pillar.icon];
             return (
               <ScrollReveal key={pillar.title} delay={i * 0.08}>
-                <div className="ibm-card rounded-sm p-6 bg-white h-full">
+                <div className="ibm-card h-full rounded-sm bg-white p-5 sm:p-6">
                   <Icon className="w-5 h-5 text-brand-600 mb-3" strokeWidth={1.5} />
                   <h3 className="text-sm font-medium text-gray-900 mb-2">{pillar.title}</h3>
                   <p className="text-xs text-gray-600 leading-relaxed">{pillar.description}</p>
@@ -108,7 +108,7 @@ export default function FoundationPage() {
             ONGs, universidades, voluntários e empresas podem se juntar à Redobrai Foundation.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button href="/#contato" size="lg">
+            <Button href="/#contato" size="lg" className="w-full min-[420px]:w-auto">
               Entrar em contato
             </Button>
           </div>

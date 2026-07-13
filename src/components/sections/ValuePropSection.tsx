@@ -7,7 +7,7 @@ import { Section } from "@/components/ui/SectionHeader";
 
 function CubesIllustration() {
   return (
-    <div className="relative w-full h-80 flex items-center justify-center">
+    <div className="relative flex h-64 w-full items-center justify-center sm:h-80">
       <div className="absolute inset-0 bg-gradient-to-br from-brand-50 to-teal-100 rounded-2xl" />
       {[
         { x: -60, y: -40, size: 72, color: "#198038", rotate: 12, delay: 0 },
@@ -50,7 +50,7 @@ function CubesIllustration() {
 export function ValuePropSection() {
   return (
     <Section className="bg-white">
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="grid items-center gap-10 sm:gap-12 lg:grid-cols-2 lg:gap-20">
         <ScrollReveal>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal text-gray-900 leading-snug tracking-tight">
             Maximize o ROI da sua força de trabalho com agentes de IA especializados
@@ -79,7 +79,7 @@ export function ValuePropSection() {
         </ScrollReveal>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6 mt-16">
+      <div className="mt-12 grid gap-4 sm:mt-16 sm:gap-6 md:grid-cols-2">
         {[
           {
             icon: Blocks,
@@ -93,7 +93,7 @@ export function ValuePropSection() {
           },
         ].map((card, i) => (
           <ScrollReveal key={card.title} delay={i * 0.1}>
-            <div className="ibm-card rounded-sm p-8 transition-shadow h-full">
+            <div className="ibm-card h-full rounded-sm p-5 transition-shadow sm:p-8">
               <div className="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center mb-5">
                 <card.icon className="w-5 h-5 text-brand-600" />
               </div>

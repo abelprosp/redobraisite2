@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Geist_Mono } from "next/font/google";
+import { MotionProvider } from "@/components/effects/MotionProvider";
 import "./globals.css";
 
 const inter = Inter({
@@ -46,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${inter.variable} ${geistMono.variable} scroll-smooth`}>
       <body className="min-h-screen bg-white font-sans antialiased text-gray-900">
-        {children}
+        <MotionProvider>{children}</MotionProvider>
       </body>
     </html>
   );

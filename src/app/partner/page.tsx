@@ -20,17 +20,17 @@ export const metadata: Metadata = {
 export default function PartnerPage() {
   return (
     <PageShell>
-      <section className="pt-28 pb-16 gradient-bg-hero">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="gradient-bg-hero pb-12 pt-24 sm:pb-16 sm:pt-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="max-w-3xl">
             <span className="inline-block mb-4 px-3 py-1 rounded-sm text-xs font-medium tracking-wider uppercase bg-brand-100 text-brand-700">
               Co-criação
             </span>
-            <h1 className="text-4xl md:text-5xl font-light text-gray-900 tracking-tight leading-tight">
+            <h1 className="text-[2.25rem] font-light leading-tight tracking-[-0.035em] text-gray-900 sm:text-4xl md:text-5xl">
               Redobrai{" "}
               <span className="text-brand-600 font-normal">Partner</span>
             </h1>
-            <p className="mt-6 text-lg text-gray-600 leading-relaxed">
+            <p className="mt-5 text-[15px] leading-6 text-gray-600 sm:mt-6 sm:text-lg sm:leading-relaxed">
               Tem uma ideia transformadora? Entramos como sócios — oferecemos engenharia,
               inteligência artificial e mentoria estratégica para construir o produto juntos.
             </p>
@@ -45,12 +45,12 @@ export default function PartnerPage() {
           align="center"
         />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-20">
+        <div className="mb-14 grid gap-4 sm:mb-20 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">
           {PARTNER_BENEFITS.map((b, i) => {
             const Icon = iconMap[b.icon];
             return (
               <ScrollReveal key={b.title} delay={i * 0.08}>
-                <div className="ibm-card rounded-sm p-6 bg-white h-full">
+                <div className="ibm-card h-full rounded-sm bg-white p-5 sm:p-6">
                   <Icon className="w-5 h-5 text-brand-600 mb-3" strokeWidth={1.5} />
                   <h3 className="text-sm font-medium text-gray-900 mb-2">{b.title}</h3>
                   <p className="text-xs text-gray-600 leading-relaxed">{b.description}</p>
@@ -62,7 +62,7 @@ export default function PartnerPage() {
 
         <SectionHeader title="Como funciona" align="center" />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <div className="mx-auto grid max-w-5xl gap-8 min-[420px]:grid-cols-2 min-[420px]:gap-6 lg:grid-cols-4">
           {PARTNER_STEPS.map((s, i) => (
             <ScrollReveal key={s.step} delay={i * 0.1}>
               <div className="text-center">
@@ -86,7 +86,7 @@ export default function PartnerPage() {
             Envie sua ideia e nossa equipe avaliará a oportunidade de parceria.
           </p>
           <div className="mt-8">
-            <Button href="/#contato" size="lg">
+            <Button href="/#contato" size="lg" className="w-full min-[420px]:w-auto">
               Enviar minha ideia
             </Button>
           </div>

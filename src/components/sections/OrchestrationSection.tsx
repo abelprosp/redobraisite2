@@ -18,7 +18,7 @@ function DarkControlPanel() {
         <span className="text-[10px] text-gray-500 font-mono ml-2">orchestrator.config</span>
       </div>
       <div className="p-5 space-y-4 font-mono text-xs">
-        <div className="text-gray-500">// Configuração do fluxo</div>
+        <div className="text-gray-500">{"// Configuração do fluxo"}</div>
         <div>
           <span className="text-brand-400">agent</span>
           <span className="text-gray-400">: </span>
@@ -69,13 +69,13 @@ export function OrchestrationSection() {
 
   return (
     <Section id="soluções" className="bg-white">
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+      <div className="grid items-start gap-10 sm:gap-12 lg:grid-cols-2 lg:gap-20">
         <ScrollReveal>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal text-gray-900 leading-snug tracking-tight mb-8">
             Crie, orquestre e controle agentes de IA
           </h2>
           <div className="space-y-6">
-            {features.map((f, i) => (
+            {features.map((f) => (
               <div key={f.title} className="border-l-2 border-brand-600 pl-5">
                 <h3 className="text-base font-medium text-gray-900 mb-1">{f.title}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{f.desc}</p>
@@ -89,8 +89,8 @@ export function OrchestrationSection() {
         </ScrollReveal>
       </div>
 
-      <div className="mt-20">
-        <h3 className="text-xl font-normal text-gray-900 text-center mb-10">
+      <div className="mt-14 sm:mt-20">
+        <h3 className="mb-7 text-center text-lg font-normal text-gray-900 sm:mb-10 sm:text-xl">
           Exemplo de orquestração em ação
         </h3>
         <div className="max-w-xl mx-auto space-y-0">
@@ -101,7 +101,7 @@ export function OrchestrationSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className={`flex items-center gap-4 p-4 rounded-sm border ${
+                className={`flex items-center gap-3 rounded-sm border p-3 sm:gap-4 sm:p-4 ${
                   step.type === "trigger"
                     ? "bg-brand-50 border-brand-200"
                     : step.type === "result"

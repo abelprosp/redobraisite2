@@ -1,14 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { Section, SectionHeader } from "@/components/ui/SectionHeader";
 
 function PlatformMockup() {
   const sidebarItems = ["Dashboard", "Agentes", "Fluxos", "Integrações", "Analytics", "Config"];
   return (
-    <div className="relative max-w-5xl mx-auto">
-      <div className="absolute -inset-6 bg-gradient-to-b from-brand-100/60 via-teal-100/40 to-white rounded-3xl" />
+    <div className="relative mx-auto max-w-5xl">
+      <div className="absolute -inset-3 rounded-2xl bg-gradient-to-b from-brand-100/60 via-teal-100/40 to-white sm:-inset-6 sm:rounded-3xl" />
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -34,19 +33,19 @@ function PlatformMockup() {
               ))}
             </nav>
           </div>
-          <div className="flex-1 p-6 bg-white">
-            <div className="flex items-center justify-between mb-6">
+          <div className="min-w-0 flex-1 bg-white p-3 min-[380px]:p-4 sm:p-6">
+            <div className="mb-5 flex flex-col items-start gap-3 min-[380px]:flex-row min-[380px]:items-center min-[380px]:justify-between sm:mb-6">
               <h3 className="text-sm font-medium text-gray-900">Central de Agentes</h3>
-              <button className="px-3 py-1.5 bg-brand-600 text-white text-xs rounded-sm">
+              <button className="min-h-10 rounded-sm bg-brand-600 px-3 py-1.5 text-xs text-white">
                 + Novo Agente
               </button>
             </div>
-            <div className="grid grid-cols-3 gap-3 mb-6">
+            <div className="mb-5 grid grid-cols-2 gap-2 min-[480px]:grid-cols-3 sm:mb-6 sm:gap-3">
               {["Comercial", "Financeiro", "RH", "Jurídico", "Marketing", "Suporte"].map(
                 (agent) => (
                   <div
                     key={agent}
-                    className="border border-gray-200 rounded-sm p-3 hover:border-brand-300 transition-colors"
+                    className="min-w-0 rounded-sm border border-gray-200 p-2.5 transition-colors hover:border-brand-300 sm:p-3"
                   >
                     <div className="w-8 h-8 rounded-sm bg-brand-100 flex items-center justify-center text-brand-700 text-xs font-bold mb-2">
                       {agent[0]}
@@ -57,11 +56,11 @@ function PlatformMockup() {
                 )
               )}
             </div>
-            <div className="border border-gray-200 rounded-sm p-4">
+            <div className="rounded-sm border border-gray-200 p-3 sm:p-4">
               <div className="text-xs text-gray-500 mb-3">Fluxo em execução</div>
-              <div className="flex items-center gap-2">
+              <div className="flex flex-wrap items-center justify-center gap-1.5 sm:justify-start sm:gap-2">
                 {["Trigger", "Comercial", "Financeiro", "CRM", "Output"].map((step, i) => (
-                  <div key={step} className="flex items-center gap-2">
+                  <div key={step} className="flex items-center gap-1.5 sm:gap-2">
                     <div
                       className={`px-2 py-1 text-[10px] rounded-sm ${
                         i === 0

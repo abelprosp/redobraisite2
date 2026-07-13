@@ -53,8 +53,8 @@ function SocialIcon({ name }: { name: (typeof SOCIAL_LINKS)[number]["icon"] }) {
 export function Footer() {
   return (
     <footer id="empresa" className="bg-[#f7f8f5] text-[#123d34]">
-      <div className="mx-auto max-w-[90rem] px-6 pb-8 pt-20 lg:px-8 lg:pt-28">
-        <div className="grid gap-16 border-b border-[#123d34]/15 pb-20 lg:grid-cols-[1.15fr_1fr] lg:gap-24">
+      <div className="mx-auto max-w-[90rem] px-4 pb-7 pt-14 sm:px-6 sm:pt-20 lg:px-8 lg:pt-28">
+        <div className="grid gap-12 border-b border-[#123d34]/15 pb-14 sm:gap-16 sm:pb-20 lg:grid-cols-[1.15fr_1fr] lg:gap-24">
           <div>
             <p className="max-w-md text-xl leading-snug tracking-tight text-[#123d34]/75 sm:text-2xl">
               Tecnologia brasileira para transformar operações, negócios e ideias.
@@ -77,19 +77,19 @@ export function Footer() {
 
           <nav
             aria-label="Navegação do rodapé"
-            className="grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3"
+            className="grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 sm:gap-x-8 sm:gap-y-12"
           >
             {Object.entries(FOOTER_LINKS).map(([title, links]) => (
               <div key={title}>
                 <h2 className="mb-5 text-xs font-semibold uppercase tracking-[0.16em] text-[#123d34]">
                   {title}
                 </h2>
-                <ul className="space-y-3">
+                <ul className="space-y-1">
                   {links.map((link) => (
                     <li key={link.label}>
                       <Link
                         href={link.href}
-                        className="text-sm text-[#123d34]/65 transition-colors hover:text-[#123d34] focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-600"
+                        className="inline-flex min-h-10 items-center py-1 text-sm leading-snug text-[#123d34]/65 transition-colors hover:text-[#123d34] focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-600"
                       >
                         {link.label}
                       </Link>
@@ -101,16 +101,16 @@ export function Footer() {
           </nav>
         </div>
 
-        <div className="grid items-end gap-10 border-b border-[#123d34]/15 py-16 lg:grid-cols-[1fr_auto]">
+        <div className="grid items-end gap-9 border-b border-[#123d34]/15 py-12 sm:py-16 lg:grid-cols-[1fr_auto]">
           <Link
             href="/"
             aria-label="Redobra AI — início"
-            className="max-w-max text-[clamp(4rem,12vw,10.5rem)] font-medium leading-[0.74] tracking-[-0.075em] text-[#123d34] focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-brand-600"
+            className="max-w-full text-[clamp(3.15rem,12vw,10.5rem)] font-medium leading-[0.82] tracking-[-0.075em] text-[#123d34] focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-brand-600 sm:max-w-max sm:leading-[0.74]"
           >
             Redobra<span className="text-brand-600"> AI</span>
           </Link>
 
-          <div className="grid gap-7 text-sm sm:grid-cols-2 lg:min-w-[27rem]">
+          <div className="grid gap-7 text-sm min-[380px]:grid-cols-2 lg:min-w-[27rem]">
             <div>
               <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-[#123d34]/45">
                 Localização
@@ -129,7 +129,7 @@ export function Footer() {
                 href="https://wa.me/5551995501677"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-1.5 text-[#123d34]/75 transition-colors hover:text-[#123d34] focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-600"
+                className="group inline-flex min-h-11 items-center gap-1.5 text-[#123d34]/75 transition-colors hover:text-[#123d34] focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-600"
               >
                 +55 51 99550-1677
                 <ArrowUpRight

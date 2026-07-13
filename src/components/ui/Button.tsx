@@ -16,7 +16,7 @@ export function Button({
   className = "",
 }: ButtonProps) {
   const base =
-    "inline-flex items-center justify-center font-medium transition-all duration-200";
+    "inline-flex min-h-11 items-center justify-center text-center font-medium transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-600 motion-reduce:transition-none";
 
   const variants = {
     primary:
@@ -30,7 +30,7 @@ export function Button({
   const sizes = {
     sm: "px-4 py-2 text-sm",
     md: "px-5 py-2.5 text-sm",
-    lg: "px-6 py-3 text-base",
+    lg: "px-6 py-3 text-[15px] sm:text-base",
   };
 
   return (

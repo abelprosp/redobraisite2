@@ -17,17 +17,17 @@ const iconMap: Record<string, LucideIcon> = {
 export function OfferingsSection() {
   return (
     <Section className="bg-white">
-      <ScrollReveal className="mb-12 max-w-3xl mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal text-gray-900 tracking-tight leading-snug">
+      <ScrollReveal className="mx-auto mb-9 max-w-3xl text-center sm:mb-12">
+        <h2 className="text-[1.75rem] font-normal leading-[1.16] tracking-[-0.025em] text-gray-900 sm:text-3xl lg:text-4xl">
           Tecnologia que transforma negócios e impacta vidas
         </h2>
-        <p className="mt-4 text-gray-600 leading-relaxed">
+        <p className="mt-4 text-[15px] leading-6 text-gray-600 sm:text-base sm:leading-relaxed">
           A Redobrai atua em software customizado, inteligência artificial, pesquisa humanitária
           e parcerias estratégicas — tudo com excelência técnica e visão de longo prazo.
         </p>
       </ScrollReveal>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div className="grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">
         {OFFERINGS.map((item, i) => {
           const Icon = iconMap[item.icon];
           return (
@@ -35,7 +35,7 @@ export function OfferingsSection() {
               <Link href={item.href}>
                 <motion.div
                   whileHover={{ y: -3 }}
-                  className="ibm-card rounded-sm p-6 h-full bg-white group cursor-pointer"
+                  className="ibm-card group h-full cursor-pointer rounded-sm bg-white p-5 sm:p-6"
                 >
                   <Icon className="w-5 h-5 text-brand-600 mb-4" strokeWidth={1.5} />
                   <h3 className="text-base font-medium text-gray-900 mb-2 group-hover:text-brand-600 transition-colors">

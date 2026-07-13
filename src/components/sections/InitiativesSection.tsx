@@ -29,8 +29,8 @@ const initiatives = [
 export function InitiativesSection() {
   return (
     <Section className="bg-gray-50">
-      <ScrollReveal className="mb-12 max-w-3xl mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl font-normal text-gray-900 tracking-tight">
+      <ScrollReveal className="mx-auto mb-9 max-w-3xl text-center sm:mb-12">
+        <h2 className="text-[1.75rem] font-normal leading-[1.16] tracking-[-0.025em] text-gray-900 md:text-3xl">
           Iniciativas Redobrai
         </h2>
         <p className="mt-4 text-gray-600">
@@ -38,11 +38,11 @@ export function InitiativesSection() {
         </p>
       </ScrollReveal>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
         {initiatives.map((item, i) => (
           <ScrollReveal key={item.title} delay={i * 0.1}>
             <Link href={item.href}>
-              <div className={`ibm-card rounded-sm p-8 h-full bg-gradient-to-br ${item.accent} group cursor-pointer hover:shadow-md transition-shadow`}>
+              <div className={`ibm-card h-full rounded-sm bg-gradient-to-br p-5 sm:p-8 ${item.accent} group cursor-pointer transition-shadow hover:shadow-md`}>
                 <item.icon className="w-6 h-6 text-brand-600 mb-4" strokeWidth={1.5} />
                 <h3 className="text-xl font-medium text-gray-900 mb-3 group-hover:text-brand-600 transition-colors">
                   {item.title}

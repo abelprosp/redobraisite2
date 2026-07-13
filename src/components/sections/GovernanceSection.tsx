@@ -22,12 +22,12 @@ export function GovernanceSection() {
         align="center"
       />
 
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
         {GOVERNANCE.map((item, i) => {
           const Icon = iconMap[item.icon];
           return (
             <ScrollReveal key={item.title} delay={i * 0.05}>
-              <motion.div whileHover={{ y: -2 }} className="ibm-card rounded-sm p-6 text-center bg-white">
+              <motion.div whileHover={{ y: -2 }} className="ibm-card h-full rounded-sm bg-white p-4 text-center sm:p-6">
                 <Icon className="w-5 h-5 text-brand-600 mx-auto mb-3" strokeWidth={1.5} />
                 <h3 className="text-gray-900 font-medium text-sm">{item.title}</h3>
               </motion.div>

@@ -20,7 +20,7 @@ export function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <ScrollReveal
-      className={`mb-12 max-w-3xl ${align === "center" ? "mx-auto text-center" : ""}`}
+      className={`mb-9 max-w-3xl sm:mb-12 ${align === "center" ? "mx-auto text-center" : ""}`}
     >
       {badge && (
         <span className="inline-block mb-4 px-3 py-1 rounded-sm text-xs font-medium tracking-wider uppercase bg-brand-100 text-brand-700">
@@ -28,7 +28,7 @@ export function SectionHeader({
         </span>
       )}
       <h2
-        className={`text-2xl md:text-3xl lg:text-4xl font-normal tracking-tight leading-snug ${
+        className={`text-[1.75rem] sm:text-3xl lg:text-4xl font-normal tracking-[-0.025em] leading-[1.16] ${
           light ? "text-white" : "text-gray-900"
         }`}
       >
@@ -36,7 +36,7 @@ export function SectionHeader({
       </h2>
       {subtitle && (
         <p
-          className={`mt-4 text-base md:text-lg leading-relaxed ${
+          className={`mt-4 text-[15px] leading-6 sm:text-base md:text-lg md:leading-relaxed ${
             light ? "text-gray-300" : "text-gray-600"
           }`}
         >
@@ -58,7 +58,7 @@ export function Section({
 }) {
   return (
     <section id={id} className={`section-padding relative ${className}`}>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">{children}</div>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">{children}</div>
     </section>
   );
 }

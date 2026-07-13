@@ -55,8 +55,8 @@ function SolutionCard({ solution }: { solution: Solution }) {
   const Icon = solution.icon;
 
   return (
-    <div className="group flex w-[220px] shrink-0 items-center gap-3.5 rounded-2xl border border-white/10 bg-white/[0.075] p-3.5 shadow-[0_14px_35px_rgba(0,0,0,0.12)] backdrop-blur-sm transition-colors duration-300 hover:border-emerald-300/35 hover:bg-white/[0.12] sm:w-[244px] sm:p-4">
-      <span className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white text-[#123f34] shadow-sm">
+    <div className="group flex w-[202px] shrink-0 items-center gap-3 rounded-xl border border-white/10 bg-white/[0.075] p-3 shadow-[0_14px_35px_rgba(0,0,0,0.12)] backdrop-blur-sm transition-colors duration-300 hover:border-emerald-300/35 hover:bg-white/[0.12] sm:w-[244px] sm:gap-3.5 sm:rounded-2xl sm:p-4">
+      <span className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white text-[#123f34] shadow-sm sm:size-12">
         {solution.monogram ? (
           <span className="text-[11px] font-bold tracking-[-0.02em]">{solution.monogram}</span>
         ) : (
@@ -101,16 +101,16 @@ function SolutionRow({
 
 export function IntegrationsSection() {
   return (
-    <section id="integrações" className="bg-white px-3 py-6 sm:px-6 sm:py-10 lg:px-8">
-      <div className="solutions-grid relative mx-auto max-w-[1500px] overflow-hidden rounded-[2rem] bg-[#103b32] py-16 shadow-[0_32px_90px_-42px_rgba(9,47,39,0.65)] sm:py-20 lg:py-24">
+    <section id="integrações" className="bg-white px-3 py-5 sm:px-6 sm:py-10 lg:px-8">
+      <div className="solutions-grid relative mx-auto max-w-[1500px] overflow-hidden rounded-[1.5rem] bg-[#103b32] py-12 shadow-[0_32px_90px_-42px_rgba(9,47,39,0.65)] sm:rounded-[2rem] sm:py-20 lg:py-24">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(111,220,140,0.14),transparent_38%),linear-gradient(180deg,transparent_55%,rgba(3,24,20,0.22))]" />
 
-        <div className="relative z-10 mx-auto max-w-3xl px-6 text-center">
+        <div className="relative z-10 mx-auto max-w-3xl px-5 text-center sm:px-6">
           <span className="inline-flex items-center gap-2 rounded-full border border-emerald-100/15 bg-white/[0.07] px-3.5 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-emerald-100/80">
             <span className="size-1.5 rounded-full bg-emerald-300" />
             Ecossistema Redobra AI
           </span>
-          <h2 className="mx-auto mt-6 max-w-2xl text-3xl font-medium leading-[1.08] tracking-[-0.04em] text-white sm:text-4xl lg:text-5xl">
+          <h2 className="mx-auto mt-5 max-w-2xl text-[1.75rem] font-medium leading-[1.1] tracking-[-0.04em] text-white sm:mt-6 sm:text-4xl lg:text-5xl">
             Sua operação conectada a tudo que faz o negócio avançar.
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-emerald-50/65 sm:text-base sm:leading-7">
@@ -127,7 +127,7 @@ export function IntegrationsSection() {
         </div>
 
         <div
-          className="solutions-marquee relative z-10 mt-14 space-y-4 sm:mt-16 sm:space-y-5"
+          className="solutions-marquee relative z-10 mt-10 space-y-3 sm:mt-16 sm:space-y-5"
           aria-label="Soluções e tecnologias Redobra AI"
         >
           <SolutionRow solutions={solutionRows[0]} />

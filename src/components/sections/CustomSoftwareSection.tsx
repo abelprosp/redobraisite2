@@ -31,7 +31,7 @@ function VisionMockup() {
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         className="overflow-hidden rounded-[1.5rem] border border-white/10 bg-gray-900 shadow-[0_30px_80px_-30px_rgba(22,22,22,0.55)]"
       >
-        <div className="flex items-center justify-between border-b border-white/10 bg-gray-800/90 px-5 py-3.5">
+        <div className="flex items-center justify-between border-b border-white/10 bg-gray-800/90 px-3 py-3 sm:px-5 sm:py-3.5">
           <div className="flex items-center gap-3">
             <div className="flex gap-1.5" aria-hidden="true">
               <span className="size-2 rounded-full bg-white/20" />
@@ -42,7 +42,7 @@ function VisionMockup() {
               vision.redobrai.ai / live-analysis
             </span>
           </div>
-          <span className="flex items-center gap-2 text-[10px] font-medium text-brand-300">
+          <span className="flex items-center gap-1.5 text-[8px] font-medium text-brand-300 min-[380px]:text-[9px] sm:gap-2 sm:text-[10px]">
             <span className="relative flex size-2">
               <span className="absolute inline-flex size-full rounded-full bg-brand-400 opacity-60 motion-safe:animate-ping" />
               <span className="relative inline-flex size-2 rounded-full bg-brand-400" />
@@ -51,7 +51,7 @@ function VisionMockup() {
           </span>
         </div>
 
-        <div className="relative aspect-[3/2] overflow-hidden bg-[#0b0f0d]">
+        <div className="relative aspect-[4/3] overflow-hidden bg-[#0b0f0d] sm:aspect-[3/2]">
           <Image
             src="/visao-computacional-costura.png"
             alt="Operadora trabalhando em uma máquina de costura industrial"
@@ -96,15 +96,15 @@ function VisionMockup() {
             </span>
           </motion.div>
 
-          <div className="absolute left-4 top-4 z-40 flex items-center gap-2 rounded-full border border-white/10 bg-black/45 px-2.5 py-1 font-mono text-[8px] text-gray-300 backdrop-blur-sm">
+          <div className="absolute left-3 top-3 z-40 flex items-center gap-1.5 rounded-full border border-white/10 bg-black/45 px-2 py-1 font-mono text-[7px] text-gray-300 backdrop-blur-sm sm:left-4 sm:top-4 sm:gap-2 sm:px-2.5 sm:text-[8px]">
             <Activity className="size-3 text-brand-400" />
             CAM 04 · LINHA DE COSTURA
           </div>
 
-          <div className="absolute bottom-4 left-4 right-4 z-40 flex items-end justify-between gap-3">
+          <div className="absolute bottom-3 left-3 right-3 z-40 flex items-end justify-between gap-2 sm:bottom-4 sm:left-4 sm:right-4 sm:gap-3">
             <div className="flex gap-1.5">
               {["FRAME 1247", "3 OBJETOS", "12 MS"].map((item) => (
-                <span key={item} className="rounded-md border border-white/10 bg-black/45 px-2 py-1.5 font-mono text-[8px] text-gray-400 backdrop-blur-md">
+                <span key={item} className="rounded-md border border-white/10 bg-black/45 px-1.5 py-1 font-mono text-[7px] text-gray-400 backdrop-blur-md sm:px-2 sm:py-1.5 sm:text-[8px]">
                   {item}
                 </span>
               ))}
@@ -122,8 +122,8 @@ function VisionMockup() {
             ["Latência", "12 ms"],
             ["Disponibilidade", "24/7"],
           ].map(([label, value]) => (
-            <div key={label} className="px-4 py-3">
-              <p className="text-[8px] uppercase tracking-[0.14em] text-gray-500">{label}</p>
+            <div key={label} className="min-w-0 px-2 py-3 sm:px-4">
+              <p className="break-words text-[7px] uppercase tracking-[0.08em] text-gray-500 sm:text-[8px] sm:tracking-[0.14em]">{label}</p>
               <p className="mt-1 text-xs font-medium text-gray-200 sm:text-sm">{value}</p>
             </div>
           ))}
@@ -145,7 +145,7 @@ export function CustomSoftwareSection() {
         align="center"
       />
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
+      <div className="mb-12 grid gap-4 sm:mb-20 sm:grid-cols-2 lg:grid-cols-4">
         {CUSTOM_SERVICES.map((s, i) => {
           const Icon = serviceIcons[s.icon];
           return (
@@ -162,22 +162,22 @@ export function CustomSoftwareSection() {
 
       <div
         id="visao-computacional"
-        className="relative scroll-mt-28 overflow-hidden rounded-[2rem] border border-gray-200/80 bg-white px-6 py-10 shadow-[0_24px_80px_-50px_rgba(22,22,22,0.3)] sm:px-10 sm:py-14 lg:px-14"
+        className="relative scroll-mt-24 overflow-hidden rounded-[1.5rem] border border-gray-200/80 bg-white px-4 py-8 shadow-[0_24px_80px_-50px_rgba(22,22,22,0.3)] sm:scroll-mt-28 sm:rounded-[2rem] sm:px-10 sm:py-14 lg:px-14"
       >
         <div className="pointer-events-none absolute -right-28 -top-28 size-80 rounded-full bg-teal-100/45 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-36 -left-24 size-80 rounded-full bg-brand-100/50 blur-3xl" />
 
-        <div className="relative grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+        <div className="relative grid items-center gap-10 sm:gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <ScrollReveal>
             <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-brand-600/15 bg-brand-50 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-brand-700">
               <span className="size-1.5 rounded-full bg-brand-500" />
               Visão Computacional
             </span>
-            <h3 className="mb-5 max-w-xl text-3xl font-normal leading-[1.12] tracking-[-0.035em] text-gray-900 md:text-4xl lg:text-[2.7rem]">
+            <h3 className="mb-4 max-w-xl text-[1.75rem] font-normal leading-[1.14] tracking-[-0.035em] text-gray-900 sm:text-3xl md:text-4xl lg:text-[2.7rem]">
               Transforme imagens em{" "}
               <span className="gradient-text">decisões inteligentes</span>
             </h3>
-            <p className="mb-8 max-w-xl text-sm leading-7 text-gray-600 md:text-base">
+            <p className="mb-6 max-w-xl text-sm leading-6 text-gray-600 sm:mb-8 sm:leading-7 md:text-base">
               Modelos de IA analisam imagens e vídeos em tempo real para identificar
               padrões, antecipar falhas e automatizar decisões com precisão.
             </p>
