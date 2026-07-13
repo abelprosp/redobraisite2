@@ -1,88 +1,129 @@
 import Link from "next/link";
-import { Logo } from "@/components/ui/Logo";
+import { ArrowUpRight, Instagram, Linkedin, MessageCircle } from "lucide-react";
 import { FOOTER_LINKS } from "@/lib/constants";
+
+const SOCIAL_LINKS = [
+  {
+    href: "https://www.linkedin.com/company/redobrai-corp",
+    label: "LinkedIn",
+    icon: Linkedin,
+  },
+  {
+    href: "https://www.instagram.com/redobrai/",
+    label: "Instagram",
+    icon: Instagram,
+  },
+  {
+    href: "https://wa.me/5551995501677",
+    label: "WhatsApp",
+    icon: MessageCircle,
+  },
+];
 
 export function Footer() {
   return (
-    <footer id="empresa" className="bg-gray-900 text-white">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
-          <div className="col-span-2 md:col-span-1">
-            <div className="mb-4">
-              <Logo height={40} />
-            </div>
-            <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-              Software customizado, visão computacional, agentes de IA e tecnologia com
-              propósito — do enterprise ao impacto social.
+    <footer id="empresa" className="bg-[#f7f8f5] text-[#123d34]">
+      <div className="mx-auto max-w-[90rem] px-6 pb-8 pt-20 lg:px-8 lg:pt-28">
+        <div className="grid gap-16 border-b border-[#123d34]/15 pb-20 lg:grid-cols-[1.15fr_1fr] lg:gap-24">
+          <div>
+            <p className="max-w-md text-xl leading-snug tracking-tight text-[#123d34]/75 sm:text-2xl">
+              Tecnologia brasileira para transformar operações, negócios e ideias.
             </p>
-            <div className="flex gap-3 mt-6">
-              {[
-                {
-                  href: "https://www.linkedin.com/company/redobrai-corp",
-                  label: "LinkedIn",
-                  icon: (
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                    </svg>
-                  ),
-                },
-                {
-                  href: "#",
-                  label: "GitHub",
-                  icon: (
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
-                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                    </svg>
-                  ),
-                },
-                {
-                  href: "https://www.instagram.com/redobrai/",
-                  label: "Instagram",
-                  icon: (
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
-                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                    </svg>
-                  ),
-                },
-              ].map(({ href, label, icon }) => (
+            <div className="mt-10 flex flex-wrap gap-3">
+              {SOCIAL_LINKS.map(({ href, label, icon: Icon }) => (
                 <a
                   key={label}
                   href={href}
-                  aria-label={label}
-                  target={href.startsWith("http") ? "_blank" : undefined}
-                  rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className="w-9 h-9 rounded-sm border border-gray-700 flex items-center justify-center text-gray-400 hover:text-white hover:border-gray-500 transition-all"
+                  aria-label={`${label} da Redobra AI (abre em nova aba)`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex size-11 items-center justify-center rounded-full border border-[#123d34]/20 text-[#123d34] transition-colors hover:border-[#123d34] hover:bg-[#123d34] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-600"
                 >
-                  {icon}
+                  <Icon className="size-[1.1rem]" aria-hidden="true" />
                 </a>
               ))}
             </div>
           </div>
 
-          {Object.entries(FOOTER_LINKS).map(([title, links]) => (
-            <div key={title}>
-              <h4 className="text-white font-medium text-sm mb-4">{title}</h4>
-              <ul className="space-y-2.5">
-                {links.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      href={link.href}
-                      className="text-gray-400 text-sm hover:text-white transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <nav
+            aria-label="Navegação do rodapé"
+            className="grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3"
+          >
+            {Object.entries(FOOTER_LINKS).map(([title, links]) => (
+              <div key={title}>
+                <h2 className="mb-5 text-xs font-semibold uppercase tracking-[0.16em] text-[#123d34]">
+                  {title}
+                </h2>
+                <ul className="space-y-3">
+                  {links.map((link) => (
+                    <li key={link.label}>
+                      <Link
+                        href={link.href}
+                        className="text-sm text-[#123d34]/65 transition-colors hover:text-[#123d34] focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-600"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </nav>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-gray-500 text-xs">
+        <div className="grid items-end gap-10 border-b border-[#123d34]/15 py-16 lg:grid-cols-[1fr_auto]">
+          <Link
+            href="/"
+            aria-label="Redobra AI — início"
+            className="max-w-max text-[clamp(4rem,12vw,10.5rem)] font-medium leading-[0.74] tracking-[-0.075em] text-[#123d34] focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-brand-600"
+          >
+            Redobra<span className="text-brand-600"> AI</span>
+          </Link>
+
+          <div className="grid gap-7 text-sm sm:grid-cols-2 lg:min-w-[27rem]">
+            <div>
+              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-[#123d34]/45">
+                Localização
+              </p>
+              <p className="leading-relaxed text-[#123d34]/75">
+                Brasil
+                <br />
+                Atendimento nacional
+              </p>
+            </div>
+            <div>
+              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-[#123d34]/45">
+                Contato
+              </p>
+              <a
+                href="https://wa.me/5551995501677"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-1.5 text-[#123d34]/75 transition-colors hover:text-[#123d34] focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-600"
+              >
+                +55 51 99550-1677
+                <ArrowUpRight
+                  className="size-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 motion-reduce:transform-none"
+                  aria-hidden="true"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-5 pt-7 text-xs text-[#123d34]/55 sm:flex-row sm:items-center sm:justify-between">
+          <p>
             &copy; {new Date().getFullYear()} Redobrai Corp. Todos os direitos reservados.
           </p>
-          <p className="text-gray-500 text-xs">Feito no Brasil</p>
+          <div className="flex flex-wrap gap-x-6 gap-y-3">
+            <Link className="transition-colors hover:text-[#123d34]" href="#">
+              Política de Privacidade
+            </Link>
+            <Link className="transition-colors hover:text-[#123d34]" href="#">
+              LGPD
+            </Link>
+            <span>Feito no Brasil</span>
+          </div>
         </div>
       </div>
     </footer>

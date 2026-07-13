@@ -1,55 +1,80 @@
-"use client";
+import { ArrowUpRight } from "lucide-react";
 
-import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
-import { DemoRequestForm } from "@/components/ui/DemoRequestForm";
+const WHATSAPP_URL =
+  "https://wa.me/5551995501677?text=Ol%C3%A1%21%20Gostaria%20de%20conversar%20sobre%20uma%20solu%C3%A7%C3%A3o%20com%20a%20Redobra%20AI.";
 
 export function CTASection() {
   return (
-    <section id="contato" className="section-padding bg-gray-100 border-t border-gray-200">
-      <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-2xl md:text-3xl lg:text-4xl font-normal text-gray-900 leading-snug tracking-tight"
-        >
-          Construa sua força de trabalho baseada em Inteligência Artificial
-        </motion.h2>
+    <section id="contato" className="bg-[#f7f8f5] px-4 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-8">
+      <div className="relative mx-auto grid min-h-[34rem] max-w-[90rem] overflow-hidden rounded-[2rem] bg-[#123d34] text-white shadow-[0_32px_90px_-45px_rgba(9,42,34,0.8)] lg:min-h-[38rem] lg:grid-cols-[1.12fr_0.88fr]">
+        <div className="relative z-10 flex flex-col justify-center px-7 py-16 sm:px-12 lg:px-16 xl:px-20">
+          <p className="mb-6 text-xs font-semibold uppercase tracking-[0.22em] text-emerald-200">
+            Vamos construir o próximo passo
+          </p>
+          <h2 className="max-w-3xl text-4xl font-medium leading-[0.98] tracking-[-0.045em] sm:text-5xl lg:text-6xl xl:text-7xl">
+            Transforme complexidade em{" "}
+            <span className="font-serif font-normal italic text-emerald-200">resultado.</span>
+          </h2>
+          <p className="mt-7 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
+            Software sob medida, visão computacional e agentes de IA desenhados para a
+            realidade da sua operação.
+          </p>
+          <div className="mt-9">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex min-h-12 items-center gap-3 rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#123d34] transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-200 motion-reduce:transform-none"
+              aria-label="Falar com a equipe da Redobra AI pelo WhatsApp (abre em nova aba)"
+            >
+              Falar com um especialista
+              <ArrowUpRight
+                aria-hidden="true"
+                className="size-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transform-none"
+              />
+            </a>
+          </div>
+        </div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="mt-4 text-gray-600 max-w-2xl mx-auto"
-        >
-          Agende uma demonstração personalizada e descubra como a Redobrai pode transformar
-          a operação da sua empresa.
-        </motion.p>
+        <div className="relative min-h-72 overflow-hidden lg:min-h-full" aria-hidden="true">
+          <div className="absolute -right-24 -top-24 size-80 rounded-full border-[3.5rem] border-emerald-200/15 sm:size-[28rem]" />
+          <div className="absolute bottom-[-18%] right-[-8%] h-[72%] w-[82%] rounded-tl-[10rem] bg-[#e7eee8] shadow-[-24px_-24px_80px_rgba(0,0,0,0.12)]">
+            <div className="absolute inset-8 overflow-hidden rounded-tl-[7rem] bg-[linear-gradient(145deg,#d8e9dd_0%,#f7faf7_48%,#b9d8c6_100%)]">
+              <div className="absolute left-[20%] top-[18%] h-[62%] w-[55%] rotate-[-12deg] rounded-[2rem] border border-[#123d34]/10 bg-white/70 shadow-[0_30px_70px_rgba(18,61,52,0.18)] backdrop-blur-sm">
+                <div className="absolute left-6 top-7 h-2 w-20 rounded-full bg-[#123d34]/15" />
+                <div className="absolute left-6 top-14 h-2 w-32 rounded-full bg-[#123d34]/10" />
+                <div className="absolute bottom-7 left-6 right-6 flex items-end gap-2">
+                  {[38, 58, 44, 76, 64].map((height, index) => (
+                    <span
+                      key={height}
+                      className="flex-1 rounded-t-full bg-[#198038]"
+                      style={{ height: `${height + index * 2}px`, opacity: 0.45 + index * 0.1 }}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.15 }}
-          className="mt-10"
-        >
-          <DemoRequestForm />
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="mt-8"
-        >
-          <a href="#plataforma" className="link-arrow text-sm">
-            Conheça a Plataforma
-            <ArrowRight className="w-4 h-4" />
-          </a>
-        </motion.div>
+          <svg
+            viewBox="0 0 120 120"
+            className="absolute right-[10%] top-[8%] size-24 text-white sm:size-32"
+          >
+            <path
+              fill="currentColor"
+              d="M60 0c0 33.1-26.9 60-60 60 33.1 0 60 26.9 60 60 0-33.1 26.9-60 60-60C86.9 60 60 33.1 60 0Z"
+            />
+          </svg>
+          <svg
+            viewBox="0 0 120 120"
+            className="absolute right-[36%] top-[4%] size-12 text-emerald-200 sm:size-16"
+          >
+            <path
+              fill="currentColor"
+              d="M60 0c0 33.1-26.9 60-60 60 33.1 0 60 26.9 60 60 0-33.1 26.9-60 60-60C86.9 60 60 33.1 60 0Z"
+            />
+          </svg>
+        </div>
       </div>
     </section>
   );
