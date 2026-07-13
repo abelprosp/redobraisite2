@@ -1,22 +1,22 @@
 import Link from "next/link";
-import { ArrowUpRight, Instagram, Linkedin, MessageCircle } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { FOOTER_LINKS } from "@/lib/constants";
 
 const SOCIAL_LINKS = [
   {
     href: "https://www.linkedin.com/company/redobrai-corp",
     label: "LinkedIn",
-    icon: Linkedin,
+    monogram: "in",
   },
   {
     href: "https://www.instagram.com/redobrai/",
     label: "Instagram",
-    icon: Instagram,
+    monogram: "ig",
   },
   {
     href: "https://wa.me/5551995501677",
     label: "WhatsApp",
-    icon: MessageCircle,
+    monogram: "wa",
   },
 ];
 
@@ -30,7 +30,7 @@ export function Footer() {
               Tecnologia brasileira para transformar operações, negócios e ideias.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
-              {SOCIAL_LINKS.map(({ href, label, icon: Icon }) => (
+              {SOCIAL_LINKS.map(({ href, label, monogram }) => (
                 <a
                   key={label}
                   href={href}
@@ -39,7 +39,9 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="inline-flex size-11 items-center justify-center rounded-full border border-[#123d34]/20 text-[#123d34] transition-colors hover:border-[#123d34] hover:bg-[#123d34] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-600"
                 >
-                  <Icon className="size-[1.1rem]" aria-hidden="true" />
+                  <span className="text-xs font-semibold uppercase tracking-tight" aria-hidden="true">
+                    {monogram}
+                  </span>
                 </a>
               ))}
             </div>
