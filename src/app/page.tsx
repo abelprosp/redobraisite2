@@ -1,5 +1,6 @@
 import { PageShell } from "@/components/layout/PageShell";
 import { Hero } from "@/components/sections/Hero";
+import { ClientsSection } from "@/components/sections/ClientsSection";
 import { OfferingsSection } from "@/components/sections/OfferingsSection";
 import { CustomSoftwareSection } from "@/components/sections/CustomSoftwareSection";
 import { AgentsSectionIntro } from "@/components/sections/AgentsSectionIntro";
@@ -21,6 +22,7 @@ export default function Home() {
   return (
     <PageShell>
       <Hero />
+      <ClientsSection />
       <OfferingsSection />
       <CustomSoftwareSection />
       <AgentsSectionIntro />

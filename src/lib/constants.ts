@@ -18,6 +18,58 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Contato", href: "/#contato" },
 ];
 
+export type TrustedClient =
+  | {
+      name: string;
+      type: "logo";
+      logo: string;
+      alt: string;
+      variant: "dark" | "light";
+    }
+  | {
+      name: string;
+      type: "typographic";
+      alt: string;
+      variant: "light";
+    };
+
+export const TRUSTED_CLIENTS: TrustedClient[] = [
+  {
+    name: "EVOLUX Soluções em RH",
+    type: "logo",
+    logo: "/clients/evolux.png",
+    alt: "Logo da EVOLUX Soluções em RH",
+    variant: "dark",
+  },
+  {
+    name: "LUXUS Solução em Telefonia",
+    type: "logo",
+    logo: "/clients/luxus.png",
+    alt: "Logo da LUXUS Solução em Telefonia",
+    variant: "dark",
+  },
+  {
+    name: "Blue MILK",
+    type: "logo",
+    logo: "/clients/blue-milk.png",
+    alt: "Logo da Blue MILK",
+    variant: "light",
+  },
+  {
+    name: "Usou Limpou",
+    type: "logo",
+    logo: "/clients/usou-limpou.png",
+    alt: "Logo da Usou Limpou",
+    variant: "dark",
+  },
+  {
+    name: "Roma Consultoria",
+    type: "typographic",
+    alt: "Roma Consultoria",
+    variant: "light",
+  },
+];
+
 export const OFFERINGS = [
   {
     title: "Software Customizado",

@@ -285,6 +285,98 @@ select {
   }
 }
 
+.clients-marquee {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
+.clients-row {
+  overflow: hidden;
+}
+
+.clients-track,
+.clients-group {
+  display: flex;
+  width: max-content;
+  gap: 0.875rem;
+}
+
+.clients-track {
+  gap: 0;
+  animation: clients-slide 40s linear infinite;
+  will-change: transform;
+}
+
+.clients-group {
+  padding-right: 0.875rem;
+}
+
+.clients-marquee:hover .clients-track {
+  animation-play-state: paused;
+}
+
+@keyframes clients-slide {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clients-row {
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+
+  .clients-track {
+    width: max-content;
+    animation: none;
+    will-change: auto;
+  }
+
+  .clients-group {
+    width: max-content;
+    flex-wrap: nowrap;
+    padding: 0 0.875rem;
+  }
+
+  .clients-group[aria-hidden="true"] {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .clients-marquee {
+    -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+  }
+
+  .clients-track,
+  .clients-group {
+    gap: 0.75rem;
+  }
+
+  .clients-track {
+    gap: 0;
+    animation-duration: 52s;
+  }
+
+  .clients-group {
+    padding-right: 0.75rem;
+  }
+}
+
 @media (max-width: 640px) {
   .solutions-marquee {
     -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
